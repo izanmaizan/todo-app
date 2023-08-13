@@ -43,7 +43,7 @@ body
 {
     top: 50%;
     position: absolute;
-    transform: translate(17px, -50%);
+    transform: translate(1px, -50%);
 }
 
 .task-input input
@@ -55,5 +55,114 @@ body
     border-radius: 5px;
     padding: 0 20px 0 53px;
     border: 1px solid #999;
+}
+
+.task-input:focus, .task-input.active
+{
+    padding-left: 52px;
+    border: 2px solid #1e293b;
+}
+
+.task-input input::placeholder
+{
+    color: #bfbfbf;
+}
+
+.controls, li
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls
+{
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.filters span
+{
+    margin: 0 8px;
+    font-size: 17px;
+    color: #444;
+    cursor: pointer;
+}
+
+.filters span:first-child
+{
+    margin-left: 0;
+}
+
+.filters span.active
+{
+    color: #1e293b;
+}
+
+.controls .clear-btn
+{
+    border: none;
+    opacity: 0.6;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    background: #1e293b;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+    transition: transform 0.25s ease;
+}
+
+.clear-btn.active
+{
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+.clear-btn:active
+{
+    transform: scale(0.93);
+}
+
+.task-box
+{
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 0 20px 10px 25px;
+}
+
+.task-box.overflow
+{
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.task-box::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+.task-box::-webkit-scrollbar-track
+{
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+
+.task-box::-webkit-scrollbar-thumb
+{
+    background: #e6e6e6;
+    border-radius: 25px;
+}
+
+.task-box .task
+{
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc;
 }
 
