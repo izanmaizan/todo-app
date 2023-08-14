@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const taskInput = document.querySelector(".task-input input"),
 filters = document.querySelectorAll(".filters span"),
 clearAll = document.querySelector(".clear-btn"),
@@ -110,7 +109,6 @@ taskInput.addEventListener("keyup", e =>{
     }
 });
 
-=======
 const taskInput = document.querySelector(".task-input input"),
 filters = document.querySelectorAll(".filters span"),
 clearAll = document.querySelector(".clear-btn"),
@@ -217,9 +215,8 @@ taskInput.addEventListener("keyup", e =>{
             todos[editId].name = userTask;
         }
         taskInput.value = "";
-        localStorage.setItems("todo-list", JSON.stringify(todos));
+        localStorage.setItem("todo-list", JSON.stringify(todos));
         showTodo(document.querySelector("span.active").id);
     }
 });
 
->>>>>>> 8268c6b5334b53acbbc92d3b4835b8dfca4295e4
