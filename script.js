@@ -1,7 +1,7 @@
 const taskInput = document.querySelector(".task-input input"),
-filters = document.querySelectorAll(".filters span"),
-clearAll = document.querySelector(".clear-btn"),
-taskBox = document.querySelector(".task-box");
+    filters = document.querySelectorAll(".filters span"),
+    clearAll = document.querySelector(".clear-btn"),
+    taskBox = document.querySelector(".task-box");
 
 let editId,
 isEditTask = false,
@@ -104,7 +104,7 @@ taskInput.addEventListener("keyup", e =>{
             todos[editId].name = userTask;
         }
         taskInput.value = "";
-        localStorage.setItems("todo-list", JSON.stringify(todos));
+        localStorage.setItem("todo-list", JSON.stringify(todos));
         showTodo(document.querySelector("span.active").id);
     }
 });
