@@ -102,8 +102,8 @@ taskInput.addEventListener("keyup", e =>{
             isEditTask = false;
             todos[editId].name = useTask;
         }
-        taskInput.value "";
+        taskInput.value = "";
         localStorage.setItem("todo-list", JSON.stringify(todos));
-        showTodo(document.querySelector("span .active").id); 
+        showTodo(document.querySelector("span.active").id); 
     }
 });
